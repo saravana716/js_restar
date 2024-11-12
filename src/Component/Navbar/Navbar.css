@@ -1,0 +1,429 @@
+.navbar{
+    width: 100%;
+    height: 100px;
+    background-color: #111111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+.navbarimg{
+    height: 100%;
+    padding: 20px;
+    background-color: #c59d5f;
+}
+.navlist{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    background-color:#111111;
+    padding: 0px 10px ;
+    z-index: 9999;
+}
+.search{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+    background-color: #272727;
+}
+.contact{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navlist ul{
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    transition: 0.7s;
+    cursor: pointer;
+
+}
+.navlist ul li{
+    font-size: 15px;
+    list-style: none;
+    line-height: 30px;
+    cursor: pointer;
+    
+}
+.navlist ul:hover{
+    color: #c59d5f;
+}
+.nav1{
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transition: 1s;
+    position: absolute;
+    box-shadow: 0 4px 12px 0 gainsboro;
+    top: 63px;
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: -10;
+    left: 0;
+    background: transparent;
+    background-color:#f3efe4;
+}
+.dec{
+    opacity: 0;
+    transition: 0.7s;
+    position: absolute;
+    font-size: 16px;
+
+}
+.navlist ul:hover .dec{
+    opacity: 1;
+    color: #c59d5f;
+}
+.sidelist{
+    width:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 10px 0px;
+    text-transform: capitalize;
+    transition: 0.7s;
+}
+.list li{
+    position: absolute;
+    left: 0;
+    transition: 0.7s;
+}
+.list:hover li{
+    left: 20px;
+}
+.list .spoon{
+    margin-right: 6px;
+    transform: rotateY(90deg) rotate(45deg);
+    transition: 0.7s;
+    font-size: 15px;
+}
+.list:hover .spoon{
+    transform: rotateY(0deg) rotate(0deg);
+    
+}
+.list:hover{
+    color: #c59d5f;
+}
+.inc{
+    opacity: 1;
+    transition: 0.7s;
+    font-size: 16px;
+
+}
+.btns{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    font-size: 16px;
+}
+.navlist ul:hover .inc{
+    opacity: 0;
+}
+.nav2{
+    width:auto;
+    opacity: 0;
+    height: -20px;
+    transition: 1s;
+    position: absolute;
+    top: 63px;
+    left: 0;
+    z-index: -10;
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    transform: rotateY(90deg);
+
+}
+.burger{
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c59d5f;
+}
+.searchbar{
+    background-color:#111111;
+    padding: 15px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+.se{
+    font-size: 20px;
+    color: #c59d5f;
+}
+.searchbar input{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: white;
+}
+.cart{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: relative;
+    border: 1px solid #c59d5f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.carticon{
+    font-size: 20px;
+}
+.cart p{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-size: 10px;
+    padding: 5px;
+    background-color:#c59d5f;
+    border-radius: 100%;
+}
+.contact1{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+.contact1 h1{
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 5px;
+}
+.conatct h4{
+    font-size: 13px;
+    margin: 6px 0px;
+    font-weight: normal;
+}
+.burgericon{
+    font-size: 40px;
+    cursor: pointer;
+}
+.slidebar{
+    position: absolute;
+    right: -100%;
+    padding: 20px;
+   
+    background-color:white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: black;
+    z-index: 99;
+    top: 100px;
+    transition: 0.6s;
+
+}
+
+.sliderbar{
+    position: absolute;
+    right: 0;
+    top: 100px;
+    transition: -0.6s;
+    background-color: white;
+    color: black;
+    z-index: 99;
+    padding: 20px;
+}
+.slidebar h1{
+    font-size: 16px;
+    background-color: #c59d5f;
+    color: white;
+    padding: 7px 30px;
+    border-radius: 50px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+.sliderbar h1{
+    font-size: 16px;
+    background-color: #c59d5f;
+    color: white;
+    padding: 7px 30px;
+    border-radius: 50px;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sliderbar h1:hover{
+    background-color: white;
+    color: black;
+    box-shadow:  0 4px 12px 0 gainsboro;
+}
+.userProfile{
+    width: 250px;
+    height: 300px;
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    right: -100%;
+}
+.pro{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    box-shadow: 0 4px 12px 0 gainsboro;
+    background-color: white;
+}
+.pro img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.openuser h1{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 15px 0px;
+}
+.openuser{
+    width:auto;
+    height:auto;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    z-index: 99;
+}
+.openuser::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    transform: rotate(133deg);
+    z-index: -1;
+}
+.openuser::after{
+    position: absolute;
+    content: "";
+    width: 800px;
+    height: 400px;
+    background-color: #e6ceab;
+    transform: rotate(-44deg);
+    z-index: -1;
+    bottom: -115px;
+    right: -280px;
+}
+.centerdiv{
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    flex-direction: column;
+}
+.fl{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.fl h1{
+    margin-left: 15px;
+    font-size: 15px;
+}
+.flbtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 20px 0px;
+}
+.flbtn button{
+    height: 35px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 15px;
+    transition: 0.8s;
+    box-shadow: 0 4px 12px 0 gainsboro;
+}
+.flbtn button::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transform: rotate(-45deg);
+    background-color: #c59d5f;
+    z-index: -1;
+    transition: 0.8s;
+    border-radius: 6px;
+}
+.flbtn button:hover::before{
+    transform: rotate(0);
+}
+.flbtn button:hover{
+    color: black;
+}
+.editprofiles1{
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    transition: 1s;
+}
+.editprofiles{
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    background-color: red;
+    
+}

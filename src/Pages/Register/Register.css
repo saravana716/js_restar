@@ -1,0 +1,175 @@
+.register{
+    width: 100%;
+    height: 100%;
+    background-color:#c59d5f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.registerInner{
+    width: 80%;
+    height: 80%;
+    background: url("../../Assets/food-4k-jx0j7rqea6yv9phh.jpg");
+    display: flex;
+    align-items: flex-end;
+    justify-content:flex-end;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 20px;
+}
+.rightinner{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.rightinner::before{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    top: -40px;
+    left: -40px;
+    background-color: #c59d5f;
+    z-index: -1;
+    transition: 1s;
+}
+
+
+.titles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.titles h1{
+    font-size: 20px;
+}
+.inputs{
+    width: 90%;
+    margin: 20px 0px;
+    display:grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap: 30px;
+}
+.inputs input{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid lightgray;
+    transition: 0.7s;
+    box-shadow: 0 2px 8px 0 gainsboro;
+}
+.inputs input:hover{
+    border:  1px solid #c59d5f;
+}
+.titles p{
+    font-size: 16px;
+    color: #c59d5f;
+}
+.imgsec{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap: 30px;
+}
+.inputs select{
+    padding: 6px 8px;
+    height: 36px;
+    outline: none;
+    border: 1px solid lightgray;
+    transition: 0.7s;
+    box-shadow: 0 2px 8px 0 gainsboro;
+    border-radius: 10px;
+}
+.inputs select::placeholder{
+    color: gray!important;
+}
+.inputs select option{
+    color: gray!important;;
+}
+.inputs select:hover{
+    border:  1px solid #c59d5f;
+}
+.imgselect{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.imgselect span{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    box-shadow: 0 4px 12px 0 gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    border: 1px solid lightgray;
+}
+.imgselect span:hover{
+    background-color: #c59d5f;
+    color: white;
+}
+.imgselect button{
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #c59d5f;
+    color: white;
+    margin-left: 10px;
+}
+
+.terms{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px 0px    ;
+}
+.terms p{
+    margin-left: 10px;
+    font-size: 13px;
+}
+.rightinner button{
+    padding: 7px 20px;
+    border-radius: 6px;
+    border: none !important;
+    background-color: #c59d5f;
+    color: white;
+    font-weight: bold;
+}
+.foots{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.foots p{
+    font-size: 13px;
+}
+.userimages{
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}

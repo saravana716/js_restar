@@ -1,0 +1,108 @@
+.history{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.history1{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.historycart{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    margin: 15px 0px;
+    padding: 15px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+.hisf{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.historycart img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.historydata{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+    flex-direction: column  ;
+    margin-left: 15px;
+}
+.his-top{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.his-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.his-top2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.his-top1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.his-top h1{
+    font-size: 16px;
+    margin-right: 10px;
+}
+.his-top h4{
+    font-size: 14px;
+    font-weight: normal;
+}
+.his-top1 h1{
+    margin-left: 10px;
+}
+.historydata p{
+    font-size: 13px;
+}
+.his-top h1 span{
+    font-weight: normal;
+    margin-right: 5px;
+}
+.historydata button{
+    padding: 7px 30px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.his-top2 h1{
+    font-size: 16px;
+    margin-right: 10px;
+}
+.his-top2 h4{
+    font-size: 14px;
+    font-weight: normal;
+}
+.his-top1 h1{
+    margin-left: 10px;
+}
+.his-top2 h1 span{
+    font-weight: normal;
+    margin-right: 5px;
+}

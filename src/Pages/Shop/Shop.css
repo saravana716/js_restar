@@ -1,0 +1,153 @@
+.shopcart{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+}
+.shopcartleft{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.shopcartright{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    overflow-y: scroll;
+}
+.shopgrid{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    grid-gap: 30px;
+}
+.radiofilter1{
+    width: 100%;
+    height: 30%;
+    overflow-y: scroll;
+}
+.amtfilter{
+    width: 100%;
+    margin: 20px 0px;
+}
+.se{
+    width: 100%;
+}
+.se input{
+    width: 100%;
+}
+.se1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 8px 0px;
+}
+.se1 h5{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.se1 span{
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gainsboro;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+}
+.blue123{
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 100%;
+}
+.red123{
+    color: red;
+}
+.se1 span .red1234 {
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 100%;
+    background-color: green;
+}
+
+/* For the non-selected category (blue) */
+.se1 span .blue1234 {
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 100%;
+    background-color: red;
+}
+.spreds{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.shopcartleft h1{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.serinput{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 2px;
+}
+.serinput input{
+    width: 100%;
+    padding: 10px;
+   border: none;
+   outline: none;
+}
+.se1 h5{
+    font-weight: normal;
+}
+.serinput button{
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.refreshbtn{
+    padding: 5px 10px ;
+    border: 1px solid gainsboro;
+    border-radius:6px;
+    font-size: 17px;
+    outline: none;
+    background-color: goldenrod;
+    color: white;
+    cursor: pointer;
+}
+.food1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 20px;
+    margin: 10px 0px;
+}
+.food1 button{
+    padding: 4px 20px;
+    font-size: 13px;
+    border-radius: 7px;
+    border: 1px solid gainsboro;
+    background-color: goldenrod;
+    color: white;
+    cursor: pointer;
+}

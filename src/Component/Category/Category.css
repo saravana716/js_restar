@@ -1,0 +1,90 @@
+.swipe{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+.swipe1{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.category{
+    height: 250px;
+    border-radius: 20px;
+    box-shadow:  0 4px 12px 0 gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px 0px;
+}
+.ctimg{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  background-color: yellow;
+}
+.ctimg img{
+    width: 100%;
+    height:100%;
+}
+.swiper {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .category h2{
+    font-size: 16px;
+    margin: 10px 0px;
+  }
+  .swipe h1{
+    width: 90%;
+    text-align: start;
+    font-size: 25px;
+  }
+  
+  .product .green{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 99;
+    font-size: 30px;
+    color: gainsboro;
+    transition: 0.8s;
+    cursor: pointer;
+  } 
+  .red{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 99;
+    font-size: 30px;
+    color: red;
+    transition: 0.8s;
+  }
+ 
