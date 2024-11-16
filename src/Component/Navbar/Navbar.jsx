@@ -250,7 +250,8 @@ async function openproductpage(params) {
                                     console.log(filterarrayspass123);
                     dispatch(reducers.filterarrayspass121(filterarrayspass123))
   navigate("/shop")
-    
+    dispatch(reducers.changewise("true"))
+    dispatch(reducers.myfiltercategories(""))
                     }
                     catch(err){
                         console.log(err);

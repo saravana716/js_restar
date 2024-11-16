@@ -18,11 +18,19 @@ fav:[],
     minvalue:"",
     maxvalue:"",
     login:false,
-    category:""
+    category:"",
+    categorywise:true,
+    statefilter:""
     },
     reducers:{
         mylogin(store,action){
             store.login=true
+        },
+        mycategories(store,action){
+            store.categorywise=false
+        },
+        changewise(store,action){
+            store.categorywise=action.payload
         },
         setmodel(store,action){
             store.model=true
@@ -39,6 +47,10 @@ fav:[],
             console.log(action);
             store.history=action.payload
             
+        },
+        myfiltercategories(store,action){
+            console.log(action);
+            store.statefilter=action.payload
         },
         setonecarts(store,action){
             console.log(action);
@@ -71,6 +83,8 @@ fav:[],
           catedispatch(store,action){
                 console.log(action.payload);
                 store.category=action.payload
+          },
+          changeselectors(store,action){
           }
     }
 })
@@ -90,7 +104,8 @@ const persistConfig={
         "filterarrayspass21",
         "minvalue",
         "maxvalue",
-        "category"
+        "category",
+        "categorywise"
 
     ]
 }

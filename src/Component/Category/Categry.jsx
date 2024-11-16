@@ -39,6 +39,8 @@ setcate(result.data.data)
       console.log(event);
       dispatch(reducers.catedispatch(event))
       navigate("/shop")
+      dispatch(reducers.mycategories())
+      dispatch(reducers.myfiltercategories(event))
     }
     
   return (

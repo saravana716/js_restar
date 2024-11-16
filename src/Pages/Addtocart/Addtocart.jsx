@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logos from "../../Assets/about_4_2.png";
 import "./Addtocart.css"
 import { useSelector } from "react-redux";
 const Addtocart = () => {
+  const [shop, setshop] = useState(20)
+  const [price, setprice] = useState("")
+  const [st, setst] = useState(false)
+  const [free, setfree] = useState(false)
+  const countref=useRef()
   const selectorlength=useSelector(function (data) {
     return data.cartlengths
   })
@@ -33,12 +38,57 @@ const Addtocart = () => {
     
     return total + productCount * item.product.productprice;
   }, 0);
+  let newtotalcoseness = totalCost+shop
+  let totalCostcheck = selector.reduce((total, item) => {
+    const productCount = count[item.product.id] || 1;
+    console.log(productCount);
+    
+    return total + productCount * item.product.productprice;
+  }, 0);
 console.log(totalCost);
+console.log(totalCostcheck);
 
   // Calculate the number of items in the cart
   const totalItems = selector.reduce((total, item) => total + (count[item.product.id] || 1), 0);
 console.log(totalItems);
 
+
+console.log(price);
+console.log(totalCost);
+
+function getshopingprice(e) {
+  let dd=parseFloat(e.target.value)||0
+  if (!isNaN(dd)) {
+    setshop(dd)
+  }
+  
+  setshop(dd)
+}
+function apply() {
+  setst(true)
+  const finalCost = totalCost + shop;
+  console.log("Final cost after applying shipping:", finalCost);
+  setprice(finalCost)
+
+}
+
+
+function checkout() {
+  if (newtotalcoseness>=500) {
+    setfree(true)
+    let cht=newtotalcoseness
+    +0
+    console.log(cht);
+    setprice(cht)
+  }
+  else{
+    setfree(false)
+let cht=newtotalcoseness+50
+    console.log(cht);
+    setprice(cht)
+    setst(true)
+  }
+}
   return (
     <>
       <div className="Addcart">
@@ -112,8 +162,9 @@ console.log(totalItems);
           <div className="shop">
             <h3>Shopping</h3>
             <div className="delivery">
-                <input type="text" placeholder="Standerd Delivery - $5.00"/>
-                <button></button>
+              
+                <input type="text" value={shop} onChange={getshopingprice} />
+            
             </div>
           </div>
           <div className="shop">
@@ -121,18 +172,23 @@ console.log(totalItems);
             <div className="delivery">
                 <input type="text" placeholder="Enter Your Code"/>
             </div>
-            <button>Apply</button>
+            <button onClick={apply}>Apply</button>
 
+          </div>
+          <div className="freedelivery">
+            <button className={free? "freecolor":"notcolor"}>Free Delivery</button>
+            <button className={!free? "freecolor":"notcolor"}>Delivery charges 50/-</button>
           </div>
           <div className="checkout">
             <div className="checkout1">
-                <h4>
+                <h4 title="">
             TOTAL COST
 
                 </h4>
-                <h4>${totalCost}</h4>
+                <h4>${st? price:newtotalcoseness}/-</h4>
             </div>
-            <button>CHECKOUT</button>
+            <button onClick={checkout}>CHECKOUT</button>
+            <button>CANCEL</button>
           </div>
         </div>
       </div>

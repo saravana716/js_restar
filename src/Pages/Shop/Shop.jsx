@@ -13,7 +13,17 @@ const Shop = () => {
         return data.category
     })
     console.log(selecotcate);
-    
+
+    const selecotcatewise=useSelector(function (data) {
+        return data.categorywise
+    })
+    console.log(selecotcatewise);
+
+    const selecotcatewise1=useSelector(function (data) {
+        return data.statefilter
+    })
+    console.log(selecotcatewise1);
+   
     const navigate = useNavigate()
     let dispatch = useDispatch()
     const [filser, setfilser] = useState([])
@@ -42,13 +52,37 @@ const Shop = () => {
     
     const selectormax = useSelector((data) => data.maxvalue)
     console.log(selectormax);
+    const [serial, setserial] = useState([])
     // Set initial filter list on component mount or when selector1 changes
     useEffect(() => {
         setfilter(selector1)
+        async function viewall(params) {
+            try {
+              let result = await axios.get("http://localhost:4000/category/viewall");
+              console.log(result);
+              let data123 = result.data.data;
+              console.log(data123);
+              setserial(data123);
+            } catch (err) {}
+          }
+          viewall()
     }, [selector1,selector])
 useEffect(() => {
   setmax(selectormin)
 }, [selectormin])
+useEffect(() => {
+   if (selecotcatewise1!="") {
+    let dtata=selector1.filter(function (data) {
+        return data.categoryname==selecotcatewise1
+      })
+      console.log(dtata);
+      setfilter(dtata)
+   }
+   else{
+    setfilter(selector1)
+   }
+      
+}, [selecotcatewise1])
 
 let userid=localStorage.getItem('userid')
 console.log(userid);
@@ -261,6 +295,34 @@ setselectcategory09("")    }
             
         }
         
+
+    }
+    async function addtofav(id) {
+        try{
+    
+    console.log(id);
+    let result=await axios.post(`http://localhost:4000/favorite/create/${userid}/${id}`)
+    console.log(result.data);
+    let productdata=result.data.data.productID
+    console.log(productdata);
+    setfavs((prev)=>new Set(prev).add(id))
+    if (productdata) {
+        
+    }
+    
+        let cor=document.querySelector(".heart")
+        console.log(cor);
+        
+        cor.classList.add("red")
+    
+        }
+        catch(err){
+            console.log(err);
+            setmsg(err.response.data.message);
+    
+            
+        }
+        
     }
     async function openmodel(event) {
         try{
@@ -284,7 +346,7 @@ setselectcategory09("")    }
     }
     return (
         <div className='shopcart'>
-            <div className='shopcartleft'>
+          {selecotcatewise &&   <div className='shopcartleft'>
                 <button onClick={() => setfilters(selector1)} className='refreshbtn'>Refresh</button>
                 <div className='searchfilter'>
                     <h1>Search</h1>
@@ -316,7 +378,7 @@ setselectcategory09("")    }
                 <div className='radiofilter'>
                     <h1>Select Category</h1>
                     <div className='radiofilter1'>
-                        {selector.map((data) => {
+                        {serial.map((data) => {
                             return (
                                <div className='se1'onClick={() => getname(data.categoryname,data.type)}>
                                  <h5 key={data.categoryname} >
@@ -330,13 +392,13 @@ setselectcategory09("")    }
                     </div>
                 </div>
                 
-            </div>
+            </div>}
             <div className='shopcartright'>
                 <div className='shopgrid'>
                     {filter.map(function (product) {
                         return (
-                            <div className='product' key={product.id}>
-                                <FaHeart className={`heart ${favs.has(product.id) ? 'red' : 'green'}`} />
+                            <div className='product' key={product.id} style={{"position":"relative"}} onClick={()=>addtofav(product.id)} >
+                                <FaHeart className={`heart ${favs.has(product.id) ? 'red' : 'green'}`} style={{"position":"absolute"}} />
                                 <div className='productimg'>
                                     <img src={product.projectimg} alt={product.productname} />
                                     <span>
